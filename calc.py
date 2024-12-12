@@ -1,33 +1,20 @@
+import sys
+
 # Function for addition
 def add(x, y):
     return x + y
 
-# Function for subtraction
-def subtract(x, y):
-    return x - y
+# Check if the correct number of arguments are passed
+if len(sys.argv) != 3:
+    print("Usage: python calc.py <num1> <num2>")
+    sys.exit(1)
 
-# Main program loop
-while True:
-    # Ask the user for operation
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Exit")
+# Get the numbers from the command-line arguments
+num1 = float(sys.argv[1])
+num2 = float(sys.argv[2])
 
-    choice = input("Enter choice (1/2/3): ")
+# Perform the addition
+result = add(num1, num2)
 
-    if choice == '3':
-        print("Exiting the program...")
-        break
-
-    # Get user input for numbers
-    num1 = 2
-    num2 = 1
-
-    # Perform the selected operation
-    if choice == '1':
-        print(f"{num1} + {num2} = {add(num1, num2)}")
-    elif choice == '2':
-        print(f"{num1} - {num2} = {subtract(num1, num2)}")
-    else:
-        print("Invalid input. Please try again.")
+# Print the result
+print(f"{num1} + {num2} = {result}")
