@@ -21,8 +21,8 @@ while True:
         break
 
     # Get user input for numbers
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
+    num1 = 2
+    num2 = 1
 
     # Perform the selected operation
     if choice == '1':
