@@ -27,7 +27,7 @@ pipeline {
         stage('Run Calculator') {
             steps {
                 // Run the calc.py script
-                sh 'python3 calc.py'
+                sh 'python3 calc.py 10 5'
             }
         }
     }
